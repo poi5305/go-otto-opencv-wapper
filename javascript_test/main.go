@@ -6,7 +6,7 @@ func main() {
 	o := otto_wrapper.NewOttoFunctions()
 	vm := o.GetVM()
 	vm.Run(`
-		var video = cvOpenVideoCapture(0);
+		var video = cvOpenVideoCapture(0)
 		var window = cvNewWindow("Test GOCV with OTTO")
 		var mat = cvNewMat()
 		while(true) {

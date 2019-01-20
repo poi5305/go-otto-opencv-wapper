@@ -1,10 +1,13 @@
 package main
 
-import cv2js "github.com/poi5305/go-otto-opencv-wapper"
+import (
+	"os"
+
+	cv2js "github.com/poi5305/go-otto-opencv-wapper"
+)
 
 func main() {
-	// *** change this path to your gocv ***
-	gocvPath := "/Users/andy/go/src/gocv.io/x/gocv"
+	gocvPath := os.Getenv("GOPATH") + "/src/gocv.io/x/gocv"
 
 	p := cv2js.NewPackageSruct(gocvPath, "gocv")
 	p.Parse()
